@@ -1,0 +1,360 @@
+{
+	"en": {
+		"site": {
+			"title": "Athenae Initiative",
+			"description": "Free public events that make room for curious conversation.",
+			"email": "hello@athenae.ca"
+		},
+		"nav": {
+			"about": "About",
+			"programs": "Programs",
+			"getInvolved": "Get involved",
+			"news": "News",
+			"contact": "Contact",
+			"donate": "Donate",
+			"language": "Français"
+		},
+		"home": {
+			"eyebrow": "A public space for ideas",
+			"headline": "Athenae Initiative",
+			"subheadline": "Free events where people meet, think together, and make room for better questions.",
+			"primaryCta": "Explore programs",
+			"secondaryCta": "Our mission",
+			"scrollHint": "Discover more"
+		},
+		"events": [
+			{
+				"slug": "the-art-of-asking",
+				"title": "The Art of Asking",
+				"summary": "An evening conversation about the questions that open up a public life.",
+				"date": "2026-11-12",
+				"time": "7:00 PM",
+				"location": "The Athenae Room",
+				"image": "/media/the-art-of-asking.svg",
+				"imageAlt": "People gathered around a table in conversation"
+			},
+			{
+				"slug": "reading-the-city",
+				"title": "Reading the City",
+				"summary": "A guided reading circle on the stories hidden in our shared places.",
+				"date": "2026-12-05",
+				"time": "2:00 PM",
+				"location": "North Branch Library",
+				"image": "/media/reading-the-city.svg",
+				"imageAlt": "Books and notes arranged on a table"
+			}
+		],
+		"articles": [
+			{
+				"slug": "why-public-conversation-matters",
+				"title": "Why public conversation matters",
+				"summary": "A short reflection on making space for thoughtful disagreement.",
+				"publishedAt": "2026-10-10",
+				"tags": ["Community", "Ideas"],
+				"image": "/media/public-conversation.svg",
+				"imageAlt": "A sunlit room prepared for a conversation",
+				"body": "Public conversation is a practice, not a performance.\n\nIt asks us to listen closely, **stay curious**, and make room for questions that do not have an easy answer.\n\n> The quality of a community is shaped by the conversations it makes possible."
+			}
+		],
+		"pages": {
+			"about": {
+				"eyebrow": "About Athenae",
+				"title": "Curiosity is a civic practice.",
+				"intro": "Athenae Initiative creates welcoming spaces for public learning, discussion, and exchange.",
+				"sections": [
+					{
+						"heading": "What we believe",
+						"body": "A healthy public life depends on access to ideas and on the freedom to examine them together."
+					},
+					{
+						"heading": "How we work",
+						"body": "We bring people, researchers, artists, and community partners together through small, thoughtful events."
+					}
+				]
+			},
+			"programs": {
+				"eyebrow": "Programs",
+				"title": "A small program with a wide horizon.",
+				"intro": "Our first programs are designed to make serious conversations feel open, practical, and human.",
+				"sections": [
+					{
+						"heading": "Public conversations",
+						"body": "Evenings with guests and neighbours around one timely question."
+					},
+					{
+						"heading": "Reading circles",
+						"body": "Low-pressure gatherings for sharing a text, a perspective, and a meal."
+					},
+					{
+						"heading": "Workshops",
+						"body": "Hands-on sessions for learning how to investigate, create, and participate."
+					}
+				]
+			},
+			"get-involved": {
+				"eyebrow": "Get involved",
+				"title": "Bring your questions with you.",
+				"intro": "Athenae grows through the time, ideas, and care of its community.",
+				"sections": [
+					{
+						"heading": "Attend",
+						"body": "Join an upcoming event and help us make the room more generous."
+					},
+					{
+						"heading": "Partner",
+						"body": "Suggest a collaboration, venue, speaker, or community connection."
+					},
+					{
+						"heading": "Volunteer",
+						"body": "Help with hosting, communications, research, or the practical work behind an event."
+					}
+				]
+			},
+			"news": {
+				"eyebrow": "News",
+				"title": "Notes from the initiative.",
+				"intro": "Updates, reflections, and invitations from Athenae.",
+				"sections": [
+					{
+						"heading": "Coming soon",
+						"body": "The first Athenae events and field notes will appear here."
+					}
+				]
+			},
+			"contact": {
+				"eyebrow": "Contact",
+				"title": "Let’s start a conversation.",
+				"intro": "Have a question, an idea, or a possible collaboration? We would like to hear from you.",
+				"sections": [
+					{
+						"heading": "Email",
+						"body": "Write to us at hello@athenae.ca and tell us what you are thinking."
+					}
+				]
+			},
+			"donate": {
+				"eyebrow": "Support Athenae",
+				"title": "Help keep ideas public.",
+				"intro": "Your support helps us keep events free and accessible.",
+				"sections": [
+					{
+						"heading": "Coming soon",
+						"body": "Donation details will be published here as the initiative grows."
+					}
+				]
+			},
+			"legal": {
+				"privacy": {
+					"eyebrow": "Legal",
+					"title": "Privacy",
+					"intro": "We collect only the information needed to respond to you and improve our events.",
+					"sections": [
+						{
+							"heading": "A simple promise",
+							"body": "We do not sell personal information. Contact us if you have questions about how information is handled."
+						}
+					]
+				},
+				"terms": {
+					"eyebrow": "Legal",
+					"title": "Terms of use",
+					"intro": "This site shares information about Athenae Initiative and its public programming.",
+					"sections": [
+						{
+							"heading": "Use of this site",
+							"body": "Please use this site respectfully and do not reproduce its content in a misleading way."
+						}
+					]
+				}
+			}
+		},
+		"footer": {
+			"organization": "Organization",
+			"participate": "Participate",
+			"legal": "Legal",
+			"tagline": "Free events for everyone.",
+			"rights": "Athenae Initiative © 2026. All rights reserved.",
+			"privacy": "Privacy",
+			"terms": "Terms of use"
+		}
+	},
+	"fr": {
+		"site": {
+			"title": "Athenae Initiative",
+			"description": "Des événements publics gratuits pour faire place aux conversations curieuses.",
+			"email": "bonjour@athenae.ca"
+		},
+		"nav": {
+			"about": "À propos",
+			"programs": "Programmation",
+			"getInvolved": "S'impliquer",
+			"news": "Actualités",
+			"contact": "Contact",
+			"donate": "Donner",
+			"language": "English"
+		},
+		"home": {
+			"eyebrow": "Un espace public pour les idées",
+			"headline": "Athenae Initiative",
+			"subheadline": "Des événements gratuits où l’on se rencontre, réfléchit ensemble et fait place aux meilleures questions.",
+			"primaryCta": "Voir la programmation",
+			"secondaryCta": "Notre mission",
+			"scrollHint": "Découvrir"
+		},
+		"events": [
+			{
+				"slug": "l-art-de-questionner",
+				"title": "L’art de questionner",
+				"summary": "Une conversation sur les questions qui ouvrent une vie publique.",
+				"date": "2026-11-12",
+				"time": "19 h",
+				"location": "La salle Athenae",
+				"image": "/media/the-art-of-asking.svg",
+				"imageAlt": "Des personnes réunies autour d'une table"
+			},
+			{
+				"slug": "lire-la-ville",
+				"title": "Lire la ville",
+				"summary": "Un cercle de lecture sur les histoires cachées dans nos lieux communs.",
+				"date": "2026-12-05",
+				"time": "14 h",
+				"location": "Bibliothèque de la succursale Nord",
+				"image": "/media/reading-the-city.svg",
+				"imageAlt": "Des livres et des notes sur une table"
+			}
+		],
+		"articles": [
+			{
+				"slug": "pourquoi-la-conversation-publique-compte",
+				"title": "Pourquoi la conversation publique compte",
+				"summary": "Une courte réflexion sur l’espace nécessaire au désaccord fécond.",
+				"publishedAt": "2026-10-10",
+				"tags": ["Communauté", "Idées"],
+				"image": "/media/public-conversation.svg",
+				"imageAlt": "Une salle baignée de lumière prête pour une conversation",
+				"body": "La conversation publique est une pratique, pas une performance.\n\nElle nous invite à écouter attentivement, à **rester curieux** et à faire place aux questions sans réponse facile.\n\n> Une communauté se définit par les conversations qu’elle rend possibles."
+			}
+		],
+		"pages": {
+			"about": {
+				"eyebrow": "À propos d'Athenae",
+				"title": "La curiosité est une pratique citoyenne.",
+				"intro": "Athenae Initiative crée des espaces accueillants pour apprendre, discuter et échanger en public.",
+				"sections": [
+					{
+						"heading": "Ce qui nous anime",
+						"body": "Une vie publique saine dépend de l'accès aux idées et de la liberté de les examiner ensemble."
+					},
+					{
+						"heading": "Notre méthode",
+						"body": "Nous réunissons des personnes, des chercheurs, des artistes et des partenaires communautaires autour d'événements attentifs."
+					}
+				]
+			},
+			"programs": {
+				"eyebrow": "Programmation",
+				"title": "Un petit programme aux horizons vastes.",
+				"intro": "Nos premiers programmes rendent les conversations sérieuses ouvertes, concrètes et humaines.",
+				"sections": [
+					{
+						"heading": "Conversations publiques",
+						"body": "Des soirées avec des invités et des voisins autour d'une question actuelle."
+					},
+					{
+						"heading": "Cercles de lecture",
+						"body": "Des rencontres simples pour partager un texte, un point de vue et un repas."
+					},
+					{
+						"heading": "Ateliers",
+						"body": "Des séances pratiques pour apprendre à enquêter, créer et participer."
+					}
+				]
+			},
+			"get-involved": {
+				"eyebrow": "S'impliquer",
+				"title": "Venez avec vos questions.",
+				"intro": "Athenae grandit grâce au temps, aux idées et à l'attention de sa communauté.",
+				"sections": [
+					{
+						"heading": "Participer",
+						"body": "Joignez-vous à un événement et aidez-nous à rendre l'espace plus accueillant."
+					},
+					{
+						"heading": "Collaborer",
+						"body": "Proposez une collaboration, un lieu, une personne invitée ou un lien communautaire."
+					},
+					{
+						"heading": "Donner un coup de main",
+						"body": "Aidez à l'accueil, aux communications, à la recherche ou à la préparation des événements."
+					}
+				]
+			},
+			"news": {
+				"eyebrow": "Actualités",
+				"title": "Les notes de l'initiative.",
+				"intro": "Nouvelles, réflexions et invitations d'Athenae.",
+				"sections": [
+					{
+						"heading": "Bientôt",
+						"body": "Les premiers événements et carnets d'Athenae seront publiés ici."
+					}
+				]
+			},
+			"contact": {
+				"eyebrow": "Contact",
+				"title": "Commençons une conversation.",
+				"intro": "Une question, une idée ou une collaboration possible? Nous aimerions vous entendre.",
+				"sections": [
+					{
+						"heading": "Courriel",
+						"body": "Écrivez-nous à bonjour@athenae.ca et dites-nous ce que vous imaginez."
+					}
+				]
+			},
+			"donate": {
+				"eyebrow": "Soutenir Athenae",
+				"title": "Aidez-nous à garder les idées publiques.",
+				"intro": "Votre soutien nous aide à garder nos événements gratuits et accessibles.",
+				"sections": [
+					{
+						"heading": "Bientôt",
+						"body": "Les détails pour faire un don seront publiés ici au fil de la croissance de l'initiative."
+					}
+				]
+			},
+			"legal": {
+				"privacy": {
+					"eyebrow": "Mentions légales",
+					"title": "Confidentialité",
+					"intro": "Nous recueillons uniquement les informations nécessaires pour vous répondre et améliorer nos événements.",
+					"sections": [
+						{
+							"heading": "Une promesse simple",
+							"body": "Nous ne vendons pas de renseignements personnels. Contactez-nous pour toute question."
+						}
+					]
+				},
+				"terms": {
+					"eyebrow": "Mentions légales",
+					"title": "Conditions d'utilisation",
+					"intro": "Ce site présente Athenae Initiative et sa programmation publique.",
+					"sections": [
+						{
+							"heading": "Utilisation du site",
+							"body": "Merci d'utiliser ce site avec respect et de ne pas reproduire son contenu de façon trompeuse."
+						}
+					]
+				}
+			}
+		},
+		"footer": {
+			"organization": "Organisation",
+			"participate": "Participer",
+			"legal": "Mentions légales",
+			"tagline": "Des événements gratuits pour tous.",
+			"rights": "Athenae Initiative © 2026. Tous droits réservés.",
+			"privacy": "Confidentialité",
+			"terms": "Conditions d'utilisation"
+		}
+	}
+}

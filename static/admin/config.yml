@@ -1,0 +1,134 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: AthenaeInitiative/athenae-website
+  branch: master
+
+media_folder: static/media
+public_folder: /media
+
+i18n:
+  structure: single_file
+  locales: [en, fr]
+  default_locale: en
+  initial_locales: all
+
+collections:
+  - name: site
+    label: Website
+    i18n: true
+    files:
+      - name: site
+        label: Website content
+        file: content/site.json
+        format: json
+        i18n: true
+        fields:
+          - name: site
+            label: Site settings
+            widget: object
+            i18n: true
+            fields:
+              - { name: title, label: Site title, widget: string, i18n: true }
+              - { name: description, label: Description, widget: text, i18n: true }
+              - { name: email, label: Email, widget: string, i18n: duplicate }
+          - name: nav
+            label: Navigation
+            widget: object
+            i18n: true
+            fields:
+              - { name: about, label: About, widget: string, i18n: true }
+              - { name: programs, label: Programs, widget: string, i18n: true }
+              - { name: getInvolved, label: Get involved, widget: string, i18n: true }
+              - { name: news, label: News, widget: string, i18n: true }
+              - { name: contact, label: Contact, widget: string, i18n: true }
+              - { name: donate, label: Donate, widget: string, i18n: true }
+              - { name: language, label: Language toggle, widget: string, i18n: true }
+          - name: home
+            label: Home page
+            widget: object
+            i18n: true
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string, i18n: true }
+              - { name: headline, label: Headline, widget: string, i18n: true }
+              - { name: subheadline, label: Subheadline, widget: text, i18n: true }
+              - { name: primaryCta, label: Primary button, widget: string, i18n: true }
+              - { name: secondaryCta, label: Secondary button, widget: string, i18n: true }
+              - { name: scrollHint, label: Scroll hint, widget: string, i18n: true }
+          - name: events
+            label: Events
+            widget: list
+            i18n: true
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { name: slug, label: Slug, widget: string, i18n: duplicate }
+              - { name: title, label: Title, widget: string, i18n: true }
+              - { name: summary, label: Summary, widget: text, i18n: true }
+              - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
+              - { name: time, label: Time, widget: string, i18n: true }
+              - { name: location, label: Location, widget: string, i18n: true }
+              - { name: image, label: Image, widget: image, i18n: duplicate }
+              - { name: imageAlt, label: Image description, widget: string, i18n: true }
+          - name: articles
+            label: Articles
+            widget: list
+            i18n: true
+            summary: "{{title}} — {{publishedAt}}"
+            fields:
+              - { name: slug, label: Slug, widget: string, i18n: duplicate }
+              - { name: title, label: Title, widget: string, i18n: true }
+              - { name: summary, label: Summary, widget: text, i18n: true }
+              - { name: publishedAt, label: Published date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
+              - name: tags
+                label: Tags
+                widget: list
+                i18n: true
+                field: { name: tag, label: Tag, widget: string, i18n: true }
+              - { name: image, label: Image, widget: image, i18n: duplicate }
+              - { name: imageAlt, label: Image description, widget: string, i18n: true }
+              - { name: body, label: Article body, widget: markdown, i18n: true }
+          - name: pages
+            label: Pages
+            widget: object
+            i18n: true
+            fields:
+              - name: about
+                label: About
+                widget: object
+                i18n: true
+                fields: &page_fields
+                  - { name: eyebrow, label: Eyebrow, widget: string, i18n: true }
+                  - { name: title, label: Title, widget: string, i18n: true }
+                  - { name: intro, label: Intro, widget: text, i18n: true }
+                  - name: sections
+                    label: Sections
+                    widget: list
+                    i18n: true
+                    fields:
+                      - { name: heading, label: Heading, widget: string, i18n: true }
+                      - { name: body, label: Body, widget: text, i18n: true }
+              - { name: programs, label: Programs, widget: object, i18n: true, fields: *page_fields }
+              - { name: get-involved, label: Get involved, widget: object, i18n: true, fields: *page_fields }
+              - { name: news, label: News, widget: object, i18n: true, fields: *page_fields }
+              - { name: contact, label: Contact, widget: object, i18n: true, fields: *page_fields }
+              - { name: donate, label: Donate, widget: object, i18n: true, fields: *page_fields }
+              - name: legal
+                label: Legal pages
+                widget: object
+                i18n: true
+                fields:
+                  - { name: privacy, label: Privacy, widget: object, i18n: true, fields: *page_fields }
+                  - { name: terms, label: Terms, widget: object, i18n: true, fields: *page_fields }
+          - name: footer
+            label: Footer
+            widget: object
+            i18n: true
+            fields:
+              - { name: organization, label: Organization, widget: string, i18n: true }
+              - { name: participate, label: Participate, widget: string, i18n: true }
+              - { name: legal, label: Legal, widget: string, i18n: true }
+              - { name: tagline, label: Tagline, widget: string, i18n: true }
+              - { name: rights, label: Copyright, widget: string, i18n: true }
+              - { name: privacy, label: Privacy link, widget: string, i18n: true }
+              - { name: terms, label: Terms link, widget: string, i18n: true }

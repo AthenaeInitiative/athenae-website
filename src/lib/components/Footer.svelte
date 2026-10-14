@@ -1,10 +1,14 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { locale } from '$lib/stores/locale';
-	import { _ } from 'svelte-i18n';
+	import { page } from '$app/state';
+	import { resolveLocale } from '$lib/stores/locale';
+	import { getSiteContent } from '$lib/content';
+
+	const currentLocale = $derived(resolveLocale(page.params.locale));
+	const content = $derived(getSiteContent(currentLocale));
 
 	function linkHref(path: string) {
-		return resolve(`/${$locale}${path}`);
+		return resolve(`/${currentLocale}${path}`);
 	}
 
 	const orgLinks = [
@@ -32,13 +36,12 @@
 			<!-- Brand column -->
 			<div class="md:col-span-1">
 				<p class="mb-4 font-display text-lg text-offwhite/70 italic">Athenae Initiative</p>
-				<p class="text-body-muted text-xs">{$_('footer.tagline')}</p>
-				<p class="text-muted-blue/50 mt-3 font-body text-xs">{$_('footer.charity')}</p>
+				<p class="text-body-muted text-xs">{content.footer.tagline}</p>
 			</div>
 
 			<!-- Organization -->
 			<div>
-				<p class="text-eyebrow mb-5">{$_('footer.links_org')}</p>
+				<p class="text-eyebrow mb-5">{content.footer.organization}</p>
 				<ul class="space-y-3" role="list">
 					{#each orgLinks as item (item.key)}
 						<li>
@@ -46,7 +49,11 @@
 								href={linkHref(item.path)}
 								class="text-muted-blue font-body text-xs tracking-wide transition-colors hover:text-bronze-400"
 							>
-								{$_(item.key)}
+								{item.key === 'nav.about'
+									? content.nav.about
+									: item.key === 'news.all_posts'
+										? content.nav.news
+										: content.nav.contact}
 							</a>
 						</li>
 					{/each}
@@ -55,7 +62,7 @@
 
 			<!-- Participate -->
 			<div>
-				<p class="text-eyebrow mb-5">{$_('footer.links_participate')}</p>
+				<p class="text-eyebrow mb-5">{content.footer.participate}</p>
 				<ul class="space-y-3" role="list">
 					{#each participateLinks as item (item.key)}
 						<li>
@@ -63,7 +70,11 @@
 								href={linkHref(item.path)}
 								class="text-muted-blue font-body text-xs tracking-wide transition-colors hover:text-bronze-400"
 							>
-								{$_(item.key)}
+								{item.key === 'nav.programs'
+									? content.nav.programs
+									: item.key === 'nav.getInvolved'
+										? content.nav.getInvolved
+										: content.nav.donate}
 							</a>
 						</li>
 					{/each}
@@ -72,7 +83,7 @@
 
 			<!-- Legal -->
 			<div>
-				<p class="text-eyebrow mb-5">{$_('footer.links_legal')}</p>
+				<p class="text-eyebrow mb-5">{content.footer.legal}</p>
 				<ul class="space-y-3" role="list">
 					{#each legalLinks as item (item.key)}
 						<li>
@@ -80,7 +91,7 @@
 								href={linkHref(item.path)}
 								class="text-muted-blue font-body text-xs tracking-wide transition-colors hover:text-bronze-400"
 							>
-								{$_(item.key)}
+								{item.key === 'footer.privacy' ? content.footer.privacy : content.footer.terms}
 							</a>
 						</li>
 					{/each}
@@ -96,6 +107,13 @@
 						example@athenae.ca
 					</a>
 				</div>
+
+				<a
+					href={resolve('/admin/')}
+					class="mt-6 inline-block text-muted-blue/60 font-body text-xs tracking-wide transition-colors hover:text-bronze-400"
+				>
+					Content management
+				</a>
 			</div>
 		</div>
 	</div>
@@ -105,7 +123,7 @@
 		<div
 			class="section-container flex flex-col items-center justify-between gap-3 py-5 sm:flex-row"
 		>
-			<p class="text-muted-blue/40 font-body text-xs">{$_('footer.rights')}</p>
+			<p class="text-muted-blue/40 font-body text-xs">{content.footer.rights}</p>
 			<div class="divider-bronze-short opacity-30"></div>
 		</div>
 	</div>

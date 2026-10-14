@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { _ } from 'svelte-i18n';
+	import { getSiteContent } from '$lib/content';
 	import { resolve } from '$app/paths';
-	import { locale } from '$lib/stores/locale';
+	import { page } from '$app/state';
+	import { resolveLocale } from '$lib/stores/locale';
 	import { onMount } from 'svelte';
 
-    import Logo from '$lib/assets/athenae_logo.png';
+	import Logo from '$lib/assets/athenae_logo.png';
 
 	let heroEl: HTMLElement;
 	let scrollY = $state(0);
 	let mounted = $state(false);
+	const currentLocale = $derived(resolveLocale(page.params.locale));
+	const content = $derived(getSiteContent(currentLocale));
 
 	// Rune-based scroll tracking
 	$effect(() => {
@@ -34,13 +37,13 @@
 	const textOffset = $derived(scrollY * 0.12);
 
 	function linkHref(path: string) {
-		return resolve(`/${$locale}${path}`);
+		return resolve(`/${currentLocale}${path}`);
 	}
 </script>
 
 <section
 	bind:this={heroEl}
-	class="relative flex min-h-screen py-20 flex-col items-center justify-center overflow-hidden bg-navy-800"
+	class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-navy-800 py-20"
 	aria-label="Hero"
 >
 	<!-- ── Background noise texture ─────────────────── -->
@@ -107,7 +110,7 @@
 					stroke-dasharray="4 8"
 				/>
 				<!-- 24 tick marks evenly spaced -->
-				{#each Array(24) as __, i (i)}
+				{#each Array.from({ length: 24 }, (_, i) => i) as i (i)}
 					{@const angle = (i / 24) * Math.PI * 2}
 					{@const x1 = 350 + Math.cos(angle) * 302}
 					{@const y1 = 350 + Math.sin(angle) * 302}
@@ -127,7 +130,7 @@
 			<!-- Second ring — counter-rotating, diamond markers -->
 			<g class="hero-pattern-ring" style="--duration:45s; --direction:reverse;">
 				<circle cx="350" cy="350" r="270" class="ring" stroke-width="0.5" />
-				{#each Array(12) as __, i (i)}
+				{#each Array.from({ length: 12 }, (_, i) => i) as i (i)}
 					{@const angle = (i / 12) * Math.PI * 2}
 					{@const cx = 350 + Math.cos(angle) * 270}
 					{@const cy2 = 350 + Math.sin(angle) * 270}
@@ -225,7 +228,7 @@
 
 			<!-- Pulsing dots layer -->
 			<g class="hero-pattern-dots">
-				{#each Array(8) as __, i (i)}
+				{#each Array.from({ length: 8 }, (_, i) => i) as i (i)}
 					{@const angle = (i / 8) * Math.PI * 2 + Math.PI / 8}
 					{@const cx = 350 + Math.cos(angle) * 310}
 					{@const cy2 = 350 + Math.sin(angle) * 310}
@@ -246,7 +249,7 @@
         transition-delay: 0ms;
       "
 		>
-			<p class="text-eyebrow mb-3">{$_('home.eyebrow')}</p>
+			<p class="text-eyebrow mb-3">{content.home.eyebrow}</p>
 			<div class="divider-bronze-short mx-auto mb-8 opacity-60"></div>
 		</div>
 
@@ -278,16 +281,16 @@
 		>
 			<div class="divider-bronze-short mx-auto mb-4 opacity-60"></div>
 			<h1 class="mb-2 font-display text-display-2xl leading-[1.05] tracking-tight text-offwhite">
-				<span class="block text-bronze-400 italic">{$_('home.headline')}</span>
+				<span class="block text-bronze-400 italic">{content.home.headline}</span>
 			</h1>
-			<p class="text-offwhite mx-auto mb-10 max-w-md text-sm leading-loose">
-				{$_('home.subheadline')}<br />
+			<p class="mx-auto mb-10 max-w-md text-sm leading-loose text-offwhite">
+				{content.home.subheadline}<br />
 			</p>
 
 			<!-- CTAs -->
 			<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a href={linkHref(`/programs`)} class="btn-bronze">
-					{$_('home.cta_primary')}
+					{content.home.primaryCta}
 					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
 						<path
 							d="M1 7h12M8 3l4 4-4 4"
@@ -299,7 +302,7 @@
 					</svg>
 				</a>
 				<a href={linkHref(`/about`)} class="btn-outline-bronze">
-					{$_('home.cta_secondary')}
+					{content.home.secondaryCta}
 				</a>
 			</div>
 		</div>
@@ -311,7 +314,7 @@
 		style="opacity: {mounted ? Math.max(0, 1 - scrollY * 0.008) : 0};"
 		aria-hidden="true"
 	>
-		<p class="text-eyebrow text-[10px] opacity-60">{$_('home.scroll_hint')}</p>
+		<p class="text-eyebrow text-[10px] opacity-60">{content.home.scrollHint}</p>
 		<div class="h-10 w-px animate-pulse bg-linear-to-b from-bronze-600/50 to-transparent"></div>
 	</div>
 </section>

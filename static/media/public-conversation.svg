@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#0a1524"/>
+  <ellipse cx="600" cy="350" rx="360" ry="145" fill="none" stroke="#b87333" stroke-width="3"/>
+  <circle cx="430" cy="350" r="35" fill="#d4a85c" opacity=".7"/>
+  <circle cx="600" cy="350" r="35" fill="#e0c080" opacity=".8"/>
+  <circle cx="770" cy="350" r="35" fill="#d4a85c" opacity=".7"/>
+  <path d="M465 350h100M635 350h100" stroke="#ead4a8" stroke-width="3" opacity=".65"/>
+  <text x="600" y="610" fill="#ead4a8" font-family="Georgia,serif" font-size="34" text-anchor="middle">Public Conversation</text>
+</svg>

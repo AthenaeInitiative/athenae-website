@@ -1,15 +1,16 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
-	import { locale, type Locale } from '$lib/stores/locale';
-	import { userStore } from '$lib/stores/user';
+	import { page } from '$app/state';
+	import { resolveLocale, type Locale } from '$lib/stores/locale';
 	import { cn } from '$lib/utils/cn';
-	import { _ } from 'svelte-i18n';
+	import { getSiteContent } from '$lib/content';
 
 	import Logo from '$lib/assets/athenae_logo.png';
 
 	let menuOpen = $state(false);
 	let scrolled = $state(false);
+	const currentLocale = $derived(resolveLocale(page.params.locale));
+	const content = $derived(getSiteContent(currentLocale));
 
 	const currentPath = $derived.by(() => {
 		const segments = page.url.pathname.split('/').filter(Boolean);
@@ -25,15 +26,14 @@
 	});
 
 	function toggleLocale() {
-		const next: Locale = $locale === 'en' ? 'fr' : 'en';
-		userStore.setLanguage(next);
+		const next: Locale = currentLocale === 'en' ? 'fr' : 'en';
 		const segments = page.url.pathname.split('/').filter(Boolean);
 		const rest = segments.slice(1).join('/');
 		window.location.href = `/${next}${rest ? '/' + rest : ''}`;
 	}
 
 	function linkHref(path: string) {
-		return resolve(`/${$locale}${path === '/' ? '' : path}`);
+		return resolve(`/${currentLocale}${path === '/' ? '' : path}`);
 	}
 
 	function isActive(path: string) {
@@ -41,11 +41,11 @@
 	}
 
 	const navLinks = [
-		{ key: 'nav.about', path: '/about' },
-		{ key: 'nav.programs', path: '/programs' },
-		{ key: 'nav.getInvolved', path: '/get-involved' },
-		{ key: 'nav.news', path: '/news' },
-		{ key: 'nav.contact', path: '/contact' }
+		{ key: 'about', path: '/about' },
+		{ key: 'programs', path: '/programs' },
+		{ key: 'getInvolved', path: '/get-involved' },
+		{ key: 'news', path: '/news' },
+		{ key: 'contact', path: '/contact' }
 	] as const;
 </script>
 
@@ -53,12 +53,12 @@
 	href="#main-content"
 	class="btn-bronze sr-only text-xs focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50"
 >
-	{$_('common.skip_to_content')}
+	Skip to content
 </a>
 
 <header
 	class={cn(
-		'fixed top-0 right-0 left-0 z-40 transition-all duration-500 border-navy-700/30',
+		'fixed top-0 right-0 left-0 z-40 border-navy-700/30 transition-all duration-500',
 		scrolled ? 'border-b bg-navy-950/75 backdrop-blur-sm' : 'bg-transparent'
 	)}
 >
@@ -91,11 +91,11 @@
 				<li>
 					<a
 						href={linkHref(link.path)}
-						class='nav-link'
-                        class:nav-link-active={isActive(link.path)}
+						class="nav-link"
+						class:nav-link-active={isActive(link.path)}
 						aria-current={isActive(link.path) ? 'page' : undefined}
 					>
-						{$_(link.key)}
+						{content.nav[link.key]}
 					</a>
 				</li>
 			{/each}
@@ -104,17 +104,13 @@
 		<!-- Right actions -->
 		<div class="flex items-center gap-4">
 			<!-- Language toggle -->
-			<button
-				onclick={toggleLocale}
-				class="nav-link hidden sm:block"
-				aria-label="Switch language to {$_('common.language')}"
-			>
-				{$_('common.language')}
+			<button onclick={toggleLocale} class="nav-link hidden sm:block" aria-label="Switch language">
+				{content.nav.language}
 			</button>
 
 			<!-- Donate CTA -->
 			<a href={linkHref('/donate')} class="btn-bronze hidden px-4 py-2 text-xs sm:inline-flex">
-				{$_('nav.donate')}
+				{content.nav.donate}
 			</a>
 
 			<!-- Mobile hamburger -->
@@ -122,7 +118,7 @@
 				onclick={() => (menuOpen = !menuOpen)}
 				class="relative -mr-2 flex h-8 w-8 items-center justify-center transition-all ease-in lg:hidden"
 				class:-translate-y-1.5={menuOpen}
-				aria-label={$_('common.open_menu')}
+				aria-label="Open menu"
 				aria-expanded={menuOpen}
 				aria-controls="mobile-menu"
 			>
@@ -157,23 +153,23 @@
 						<a
 							href={linkHref(link.path)}
 							onclick={() => (menuOpen = false)}
-							class='nav-link'
-                            class:nav-link-active={isActive(link.path)}
+							class="nav-link"
+							class:nav-link-active={isActive(link.path)}
 						>
-							{$_(link.key)}
+							{content.nav[link.key]}
 						</a>
 					</li>
 				{/each}
 				<li class="flex items-center justify-between pt-2">
 					<button onclick={toggleLocale} class="nav-link">
-						{$_('common.language')}
+						{content.nav.language}
 					</button>
 					<a
 						href={linkHref('/donate')}
 						onclick={() => (menuOpen = false)}
 						class="btn-bronze px-4 py-2 text-xs"
 					>
-						{$_('nav.donate')}
+						{content.nav.donate}
 					</a>
 				</li>
 			</ul>
