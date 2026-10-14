@@ -1,14 +1,22 @@
 import siteContent from '../../content/site.json';
+import eventsContent from '../../content/events.json';
+import articlesContent from '../../content/articles.json';
 import { marked } from 'marked';
 import type { Locale } from './stores/locale';
 
-export type SiteContent = (typeof siteContent)['en'];
+export type SiteContent = Omit<(typeof siteContent)['en'], 'events' | 'articles'> & {
+	events: (typeof eventsContent)['en']['events'];
+	articles: (typeof articlesContent)['en']['articles'];
+};
 export type ContentPage = SiteContent['pages'][Exclude<keyof SiteContent['pages'], 'legal'>];
 export type Event = SiteContent['events'][number];
 export type Article = SiteContent['articles'][number];
 
 export function getSiteContent(locale: Locale): SiteContent {
-	return siteContent[locale] ?? siteContent.en;
+	const site = siteContent[locale] ?? siteContent.en;
+	const events = eventsContent[locale] ?? eventsContent.en;
+	const articles = articlesContent[locale] ?? articlesContent.en;
+	return { ...site, ...events, ...articles };
 }
 
 export function getPageContent(locale: Locale, slug: string): ContentPage | null {

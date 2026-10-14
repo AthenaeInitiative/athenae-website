@@ -57,38 +57,6 @@ collections:
               - { name: primaryCta, label: Primary button, widget: string, i18n: true }
               - { name: secondaryCta, label: Secondary button, widget: string, i18n: true }
               - { name: scrollHint, label: Scroll hint, widget: string, i18n: true }
-          - name: events
-            label: Events
-            widget: list
-            i18n: true
-            summary: "{{title}} — {{date}}"
-            fields:
-              - { name: slug, label: Slug, widget: string, i18n: duplicate }
-              - { name: title, label: Title, widget: string, i18n: true }
-              - { name: summary, label: Summary, widget: text, i18n: true }
-              - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
-              - { name: time, label: Time, widget: string, i18n: true }
-              - { name: location, label: Location, widget: string, i18n: true }
-              - { name: image, label: Image, widget: image, i18n: duplicate }
-              - { name: imageAlt, label: Image description, widget: string, i18n: true }
-          - name: articles
-            label: Articles
-            widget: list
-            i18n: true
-            summary: "{{title}} — {{publishedAt}}"
-            fields:
-              - { name: slug, label: Slug, widget: string, i18n: duplicate }
-              - { name: title, label: Title, widget: string, i18n: true }
-              - { name: summary, label: Summary, widget: text, i18n: true }
-              - { name: publishedAt, label: Published date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
-              - name: tags
-                label: Tags
-                widget: list
-                i18n: true
-                field: { name: tag, label: Tag, widget: string, i18n: true }
-              - { name: image, label: Image, widget: image, i18n: duplicate }
-              - { name: imageAlt, label: Image description, widget: string, i18n: true }
-              - { name: body, label: Article body, widget: markdown, i18n: true }
           - name: pages
             label: Pages
             widget: object
@@ -133,3 +101,55 @@ collections:
               - { name: rights, label: Copyright, widget: string, i18n: true }
               - { name: privacy, label: Privacy link, widget: string, i18n: true }
               - { name: terms, label: Terms link, widget: string, i18n: true }
+  - name: events
+    label: Events
+    i18n: true
+    files:
+      - name: events
+        label: Events
+        file: content/events.json
+        format: json
+        i18n: true
+        fields:
+          - name: events
+            label: Events
+            widget: list
+            i18n: true
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { name: slug, label: Slug, widget: string, i18n: duplicate }
+              - { name: title, label: Title, widget: string, i18n: true }
+              - { name: summary, label: Summary, widget: text, i18n: true }
+              - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
+              - { name: time, label: Time, widget: string, i18n: true }
+              - { name: location, label: Location, widget: string, i18n: true }
+              - { name: image, label: Image, widget: image, i18n: duplicate }
+              - { name: imageAlt, label: Image description, widget: string, i18n: true }
+  - name: articles
+    label: Articles
+    i18n: true
+    files:
+      - name: articles
+        label: Articles
+        file: content/articles.json
+        format: json
+        i18n: true
+        fields:
+          - name: articles
+            label: Articles
+            widget: list
+            i18n: true
+            summary: "{{title}} — {{publishedAt}}"
+            fields:
+              - { name: slug, label: Slug, widget: string, i18n: duplicate }
+              - { name: title, label: Title, widget: string, i18n: true }
+              - { name: summary, label: Summary, widget: text, i18n: true }
+              - { name: publishedAt, label: Published date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
+              - name: tags
+                label: Tags
+                widget: list
+                i18n: true
+                field: { name: tag, label: Tag, widget: string, i18n: true }
+              - { name: image, label: Image, widget: image, i18n: duplicate }
+              - { name: imageAlt, label: Image description, widget: string, i18n: true }
+              - { name: body, label: Article body, widget: markdown, i18n: true }

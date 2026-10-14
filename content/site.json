@@ -22,40 +22,6 @@
 			"secondaryCta": "Our mission",
 			"scrollHint": "Discover more"
 		},
-		"events": [
-			{
-				"slug": "the-art-of-asking",
-				"title": "The Art of Asking",
-				"summary": "An evening conversation about the questions that open up a public life.",
-				"date": "2026-11-12",
-				"time": "7:00 PM",
-				"location": "The Athenae Room",
-				"image": "/media/the-art-of-asking.svg",
-				"imageAlt": "People gathered around a table in conversation"
-			},
-			{
-				"slug": "reading-the-city",
-				"title": "Reading the City",
-				"summary": "A guided reading circle on the stories hidden in our shared places.",
-				"date": "2026-12-05",
-				"time": "2:00 PM",
-				"location": "North Branch Library",
-				"image": "/media/reading-the-city.svg",
-				"imageAlt": "Books and notes arranged on a table"
-			}
-		],
-		"articles": [
-			{
-				"slug": "why-public-conversation-matters",
-				"title": "Why public conversation matters",
-				"summary": "A short reflection on making space for thoughtful disagreement.",
-				"publishedAt": "2026-10-10",
-				"tags": ["Community", "Ideas"],
-				"image": "/media/public-conversation.svg",
-				"imageAlt": "A sunlit room prepared for a conversation",
-				"body": "Public conversation is a practice, not a performance.\n\nIt asks us to listen closely, **stay curious**, and make room for questions that do not have an easy answer.\n\n> The quality of a community is shaped by the conversations it makes possible."
-			}
-		],
 		"pages": {
 			"about": {
 				"eyebrow": "About Athenae",
@@ -201,40 +167,6 @@
 			"secondaryCta": "Notre mission",
 			"scrollHint": "Découvrir"
 		},
-		"events": [
-			{
-				"slug": "l-art-de-questionner",
-				"title": "L’art de questionner",
-				"summary": "Une conversation sur les questions qui ouvrent une vie publique.",
-				"date": "2026-11-12",
-				"time": "19 h",
-				"location": "La salle Athenae",
-				"image": "/media/the-art-of-asking.svg",
-				"imageAlt": "Des personnes réunies autour d'une table"
-			},
-			{
-				"slug": "lire-la-ville",
-				"title": "Lire la ville",
-				"summary": "Un cercle de lecture sur les histoires cachées dans nos lieux communs.",
-				"date": "2026-12-05",
-				"time": "14 h",
-				"location": "Bibliothèque de la succursale Nord",
-				"image": "/media/reading-the-city.svg",
-				"imageAlt": "Des livres et des notes sur une table"
-			}
-		],
-		"articles": [
-			{
-				"slug": "pourquoi-la-conversation-publique-compte",
-				"title": "Pourquoi la conversation publique compte",
-				"summary": "Une courte réflexion sur l’espace nécessaire au désaccord fécond.",
-				"publishedAt": "2026-10-10",
-				"tags": ["Communauté", "Idées"],
-				"image": "/media/public-conversation.svg",
-				"imageAlt": "Une salle baignée de lumière prête pour une conversation",
-				"body": "La conversation publique est une pratique, pas une performance.\n\nElle nous invite à écouter attentivement, à **rester curieux** et à faire place aux questions sans réponse facile.\n\n> Une communauté se définit par les conversations qu’elle rend possibles."
-			}
-		],
 		"pages": {
 			"about": {
 				"eyebrow": "À propos d'Athenae",

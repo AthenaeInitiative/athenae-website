@@ -1,0 +1,50 @@
+{
+	"en": {
+		"events": [
+			{
+				"slug": "the-art-of-asking",
+				"title": "The Art of Asking",
+				"summary": "An evening conversation about the questions that open up a public life.",
+				"date": "2026-11-12",
+				"time": "7:00 PM",
+				"location": "The Athenae Room",
+				"image": "/media/the-art-of-asking.svg",
+				"imageAlt": "People gathered around a table in conversation"
+			},
+			{
+				"slug": "reading-the-city",
+				"title": "Reading the City",
+				"summary": "A guided reading circle on the stories hidden in our shared places.",
+				"date": "2026-12-05",
+				"time": "2:00 PM",
+				"location": "North Branch Library",
+				"image": "/media/reading-the-city.svg",
+				"imageAlt": "Books and notes arranged on a table"
+			}
+		]
+	},
+	"fr": {
+		"events": [
+			{
+				"slug": "l-art-de-questionner",
+				"title": "L’art de questionner",
+				"summary": "Une conversation sur les questions qui ouvrent une vie publique.",
+				"date": "2026-11-12",
+				"time": "19 h",
+				"location": "La salle Athenae",
+				"image": "/media/the-art-of-asking.svg",
+				"imageAlt": "Des personnes réunies autour d'une table"
+			},
+			{
+				"slug": "lire-la-ville",
+				"title": "Lire la ville",
+				"summary": "Un cercle de lecture sur les histoires cachées dans nos lieux communs.",
+				"date": "2026-12-05",
+				"time": "14 h",
+				"location": "Bibliothèque de la succursale Nord",
+				"image": "/media/reading-the-city.svg",
+				"imageAlt": "Des livres et des notes sur une table"
+			}
+		]
+	}
+}
