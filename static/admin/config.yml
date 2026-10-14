@@ -4,6 +4,7 @@ backend:
   name: github
   repo: AthenaeInitiative/athenae-website
   branch: master
+  base_url: https://sveltia-cms-auth.athenaeinitiative.workers.dev
 
 media_folder: static/media
 public_folder: /media
