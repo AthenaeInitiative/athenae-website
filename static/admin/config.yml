@@ -17,11 +17,11 @@ i18n:
 
 collections:
   - name: site
-    label: Website
+    label: Website Content
     i18n: true
     files:
       - name: site
-        label: Website content
+        label: General strings
         file: content/site.json
         format: json
         i18n: true
@@ -57,38 +57,6 @@ collections:
               - { name: primaryCta, label: Primary button, widget: string, i18n: true }
               - { name: secondaryCta, label: Secondary button, widget: string, i18n: true }
               - { name: scrollHint, label: Scroll hint, widget: string, i18n: true }
-          - name: pages
-            label: Pages
-            widget: object
-            i18n: true
-            fields:
-              - name: about
-                label: About
-                widget: object
-                i18n: true
-                fields: &page_fields
-                  - { name: eyebrow, label: Eyebrow, widget: string, i18n: true }
-                  - { name: title, label: Title, widget: string, i18n: true }
-                  - { name: intro, label: Intro, widget: text, i18n: true }
-                  - name: sections
-                    label: Sections
-                    widget: list
-                    i18n: true
-                    fields:
-                      - { name: heading, label: Heading, widget: string, i18n: true }
-                      - { name: body, label: Body, widget: text, i18n: true }
-              - { name: programs, label: Programs, widget: object, i18n: true, fields: *page_fields }
-              - { name: get-involved, label: Get involved, widget: object, i18n: true, fields: *page_fields }
-              - { name: news, label: News, widget: object, i18n: true, fields: *page_fields }
-              - { name: contact, label: Contact, widget: object, i18n: true, fields: *page_fields }
-              - { name: donate, label: Donate, widget: object, i18n: true, fields: *page_fields }
-              - name: legal
-                label: Legal pages
-                widget: object
-                i18n: true
-                fields:
-                  - { name: privacy, label: Privacy, widget: object, i18n: true, fields: *page_fields }
-                  - { name: terms, label: Terms, widget: object, i18n: true, fields: *page_fields }
           - name: footer
             label: Footer
             widget: object
@@ -101,6 +69,65 @@ collections:
               - { name: rights, label: Copyright, widget: string, i18n: true }
               - { name: privacy, label: Privacy link, widget: string, i18n: true }
               - { name: terms, label: Terms link, widget: string, i18n: true }
+  - name: pages
+    label: Pages
+    i18n:
+      structure: multiple_files
+      locales: [en, fr]
+      default_locale: en
+    files:
+      - name: about
+        label: About
+        file: content/pages/about.{{locale}}.json
+        format: json
+        i18n: true
+        fields: &page_fields
+          - { name: eyebrow, label: Eyebrow, widget: string, i18n: true }
+          - { name: title, label: Title, widget: string, i18n: true }
+          - { name: intro, label: Intro, widget: text, i18n: true }
+          - { name: body, label: Page content, widget: markdown, i18n: true }
+      - name: programs
+        label: Programs
+        file: content/pages/programs.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
+      - name: get-involved
+        label: Get involved
+        file: content/pages/get-involved.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
+      - name: news
+        label: News
+        file: content/pages/news.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
+      - name: contact
+        label: Contact
+        file: content/pages/contact.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
+      - name: donate
+        label: Donate
+        file: content/pages/donate.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
+      - name: terms
+        label: Terms of use
+        file: content/pages/terms.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
+      - name: privacy
+        label: Privacy
+        file: content/pages/privacy.{{locale}}.json
+        format: json
+        i18n: true
+        fields: *page_fields
   - name: events
     label: Events
     i18n: true

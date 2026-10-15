@@ -144,13 +144,8 @@
 			<h1 class="text-section-heading mb-6">{content.title}</h1>
 			<p class="max-w-2xl text-lg leading-relaxed text-offwhite/75">{content.intro}</p>
 
-			<div class="mt-16 space-y-10">
-				{#each content.sections as section (section.heading)}
-					<article class="quote-band">
-						<h2 class="mb-2 font-display text-2xl text-bronze-300">{section.heading}</h2>
-						<p class="leading-relaxed text-offwhite/70">{section.body}</p>
-					</article>
-				{/each}
+			<div class="mt-16">
+				<MarkdownContent body={content.body} />
 			</div>
 
 			{#if slug === 'contact'}
