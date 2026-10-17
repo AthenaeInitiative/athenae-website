@@ -1,0 +1,68 @@
+{
+	"en": {
+		"site": {
+			"title": "Athenae Initiative",
+			"description": "Free public events that make room for curious conversation.",
+			"email": "hello@athenae.ca"
+		},
+		"nav": {
+			"about": "About",
+			"programs": "Programs",
+			"getInvolved": "Get involved",
+			"news": "News",
+			"contact": "Contact",
+			"donate": "Donate",
+			"language": "Français"
+		},
+		"home": {
+			"eyebrow": "A public space for ideas",
+			"headline": "Athenae Initiative",
+			"subheadline": "Free events where people meet, think together, and make room for better questions.",
+			"primaryCta": "Explore programs",
+			"secondaryCta": "Our mission",
+			"scrollHint": "Discover more"
+		},
+		"footer": {
+			"organization": "Organization",
+			"participate": "Participate",
+			"legal": "Legal",
+			"tagline": "Free events for everyone.",
+			"rights": "Athenae Initiative © 2026. All rights reserved.",
+			"privacy": "Privacy",
+			"terms": "Terms of use"
+		}
+	},
+	"fr": {
+		"site": {
+			"title": "Athenae Initiative",
+			"description": "Des événements publics gratuits pour faire place aux conversations curieuses.",
+			"email": "bonjour@athenae.ca"
+		},
+		"nav": {
+			"about": "À propos",
+			"programs": "Programmation",
+			"getInvolved": "S'impliquer",
+			"news": "Actualités",
+			"contact": "Contact",
+			"donate": "Donner",
+			"language": "English"
+		},
+		"home": {
+			"eyebrow": "Un espace public pour les idées",
+			"headline": "Athenae Initiative",
+			"subheadline": "Des événements gratuits où l’on se rencontre, réfléchit ensemble et fait place aux meilleures questions.",
+			"primaryCta": "Voir la programmation",
+			"secondaryCta": "Notre mission",
+			"scrollHint": "Découvrir"
+		},
+		"footer": {
+			"organization": "Organisation",
+			"participate": "Participer",
+			"legal": "Mentions légales",
+			"tagline": "Des événements gratuits pour tous.",
+			"rights": "Athenae Initiative © 2026. Tous droits réservés.",
+			"privacy": "Confidentialité",
+			"terms": "Conditions d'utilisation"
+		}
+	}
+}

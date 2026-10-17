@@ -1,8 +1,6 @@
 <script lang="ts">
 	import './layout.css';
-	import { initI18n } from '$lib/i18n';
-
-	initI18n();
+	import favicon from '$lib/assets/athenae_logo.png';
 
 	let { children } = $props();
 </script>

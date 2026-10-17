@@ -10,7 +10,7 @@ const config = {
         adapter: adapter({
             routes: {
                 include: ['/*'],
-                exclude: ['<all>'],
+                exclude: ['/admin/*', '/media/*', '/robots.txt'],
             },
         })
     },
