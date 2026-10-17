@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { resolveLocale } from '$lib/stores/locale';
-	import type { Article } from '$lib/content';
+	import { getSiteContent, type Article } from '$lib/content';
 
 	let { article }: { article: Article } = $props();
 	const currentLocale = $derived(resolveLocale(page.params.locale));
@@ -38,7 +38,7 @@
 			{/each}
 		</div>
 		<a href={linkHref(`/news/${article.slug}`)} class="btn-outline-bronze mt-6 px-4 py-2 text-xs">
-			{currentLocale === 'fr' ? 'Lire l’article' : 'Read article'}
+			{getSiteContent(currentLocale).actions.readArticle}
 		</a>
 	</div>
 </article>

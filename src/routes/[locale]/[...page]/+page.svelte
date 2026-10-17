@@ -36,16 +36,16 @@
 
 <svelte:head>
 	{#if article}
-		<title>{article.title} — Athenae Initiative</title>
+		<title>{article.title} — {getSiteContent(locale).site.title}</title>
 		<meta name="description" content={article.summary} />
 	{:else if event}
-		<title>{event.title} — Athenae Initiative</title>
+		<title>{event.title} — {getSiteContent(locale).site.title}</title>
 		<meta name="description" content={event.summary} />
 	{:else if content}
-		<title>{content.title} — Athenae Initiative</title>
+		<title>{content.title} — {getSiteContent(locale).site.title}</title>
 		<meta name="description" content={content.intro} />
 	{:else}
-		<title>Page not found — Athenae Initiative</title>
+		<title>{getSiteContent(locale).news.pageNotFound} — {getSiteContent(locale).site.title}</title>
 	{/if}
 </svelte:head>
 
@@ -53,7 +53,7 @@
 	<section class="section-container section-py pt-36">
 		<div class="mx-auto max-w-3xl">
 			<a class="nav-link" href={linkHref('/news')}
-				>← {locale === 'fr' ? 'Toutes les nouvelles' : 'All news'}</a
+				>← {getSiteContent(locale).actions.allNews}</a
 			>
 			<p class="text-eyebrow mt-10 mb-4">{article.publishedAt}</p>
 			<h1 class="text-section-heading">{article.title}</h1>
@@ -77,7 +77,7 @@
 	<section class="section-container section-py pt-36">
 		<div class="mx-auto max-w-4xl">
 			<a class="nav-link" href={linkHref('/news')}
-				>← {locale === 'fr' ? 'Toutes les nouvelles' : 'All news'}</a
+				>← {getSiteContent(locale).actions.allNews}</a
 			>
 			<div class="mt-10 grid gap-10 md:grid-cols-2 md:items-center">
 				<img class="aspect-[4/3] w-full object-cover" src={event.image} alt={event.imageAlt} />
@@ -103,7 +103,7 @@
 			<div class="mb-20">
 				<div class="mb-8 flex items-center justify-between">
 					<h2 class="font-display text-3xl text-offwhite">
-						{locale === 'fr' ? 'Événements à venir' : 'Upcoming events'}
+						{getSiteContent(locale).news.upcomingEvents}
 					</h2>
 				</div>
 				<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -112,12 +112,17 @@
 					{/each}
 				</div>
 			</div>
+		{:else}
+			<div class="mb-20">
+				<h2 class="font-display text-3xl text-offwhite">{getSiteContent(locale).news.upcomingEvents}</h2>
+				<p class="mt-4 text-offwhite/65">{getSiteContent(locale).news.noUpcomingEvents}</p>
+			</div>
 		{/if}
 
 		<div>
 			<div class="mb-8 flex flex-wrap items-center justify-between gap-4">
 				<h2 class="font-display text-3xl text-offwhite">
-					{locale === 'fr' ? 'Articles' : 'Articles'}
+					{getSiteContent(locale).news.articles}
 				</h2>
 				{#if selectedTag}
 					<a class="tag" href={linkHref('/news')}>{selectedTag} ×</a>
@@ -131,7 +136,9 @@
 				</div>
 			{:else}
 				<p class="text-offwhite/65">
-					{locale === 'fr' ? 'Aucun article avec cette étiquette.' : 'No articles match this tag.'}
+					{selectedTag
+						? getSiteContent(locale).news.noArticlesForTag
+						: getSiteContent(locale).news.noArticles}
 				</p>
 			{/if}
 		</div>
@@ -150,11 +157,11 @@
 
 			{#if slug === 'contact'}
 				<a class="btn-bronze mt-12" href={`mailto:${getSiteContent(locale).site.email}`}>
-					{locale === 'fr' ? 'Écrire un courriel' : 'Send an email'}
+					{getSiteContent(locale).actions.sendEmail}
 				</a>
 			{:else if slug === 'donate'}
 				<a class="btn-outline-bronze mt-12" href={linkHref('/contact')}>
-					{locale === 'fr' ? 'Nous contacter' : 'Contact us'}
+					{getSiteContent(locale).actions.contactUs}
 				</a>
 			{/if}
 		</div>
@@ -162,6 +169,6 @@
 {:else}
 	<section class="section-container section-py pt-36">
 		<p class="text-eyebrow mb-4">404</p>
-		<h1 class="text-section-heading">Page not found</h1>
+		<h1 class="text-section-heading">{getSiteContent(locale).news.pageNotFound}</h1>
 	</section>
 {/if}

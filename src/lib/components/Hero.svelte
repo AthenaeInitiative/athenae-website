@@ -42,7 +42,7 @@
 <section
 	bind:this={heroEl}
 	class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-navy-800 py-20"
-	aria-label="Hero"
+	aria-label={content.accessibility.hero}
 >
 	<!-- ── Background noise texture ─────────────────── -->
 	<div
@@ -262,7 +262,7 @@
 		>
 			<img
 				src="/assets/athenae_logo.png"
-				alt="Athenae Initiative — two birds in flight within an oval"
+				alt={content.accessibility.logoAlt}
 				class="h-auto w-[min(240px,52vw)] object-contain brightness-0 invert"
 				style="filter: invert(1) sepia(0.2) saturate(0.8) brightness(0.9);"
 			/>

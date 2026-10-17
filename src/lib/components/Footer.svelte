@@ -35,7 +35,7 @@
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-4">
 			<!-- Brand column -->
 			<div class="md:col-span-1">
-				<p class="mb-4 font-display text-lg text-offwhite/70 italic">Athenae Initiative</p>
+				<p class="mb-4 font-display text-lg text-offwhite/70 italic">{content.site.title}</p>
 				<p class="text-body-muted text-xs">{content.footer.tagline}</p>
 			</div>
 
@@ -99,12 +99,12 @@
 
 				<!-- Email -->
 				<div class="mt-6">
-					<p class="text-eyebrow mb-2">Contact</p>
+				<p class="text-eyebrow mb-2">{content.footer.contact}</p>
 					<a
-						href="mailto:athenaeinitiative@gmail.com"
+						href={`mailto:${content.site.email}`}
 						class="font-body text-xs text-bronze-400 transition-colors hover:text-bronze-300"
 					>
-						athenaeinitiative@gmail.com
+						{content.site.email}
 					</a>
 				</div>
 
@@ -112,7 +112,7 @@
 					href={resolve('/admin/')}
 					class="mt-6 inline-block text-muted-blue/60 font-body text-xs tracking-wide transition-colors hover:text-bronze-400"
 				>
-					Content management
+					{content.actions.contentManagement}
 				</a>
 			</div>
 		</div>

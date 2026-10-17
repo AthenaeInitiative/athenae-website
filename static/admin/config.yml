@@ -57,6 +57,11 @@ collections:
               - { name: primaryCta, label: Primary button, widget: string, i18n: true }
               - { name: secondaryCta, label: Secondary button, widget: string, i18n: true }
               - { name: scrollHint, label: Scroll hint, widget: string, i18n: true }
+              - { name: upcomingLabel, label: Upcoming section label, widget: string, i18n: true }
+              - { name: upcomingHeading, label: Upcoming section heading, widget: string, i18n: true }
+              - { name: viewAllNews, label: View all news, widget: string, i18n: true }
+              - { name: fieldNotesLabel, label: Field notes label, widget: string, i18n: true }
+              - { name: fieldNotesHeading, label: Field notes heading, widget: string, i18n: true }
           - name: footer
             label: Footer
             widget: object
@@ -69,6 +74,42 @@ collections:
               - { name: rights, label: Copyright, widget: string, i18n: true }
               - { name: privacy, label: Privacy link, widget: string, i18n: true }
               - { name: terms, label: Terms link, widget: string, i18n: true }
+              - { name: contact, label: Contact label, widget: string, i18n: true }
+          - name: accessibility
+            label: Accessibility labels
+            widget: object
+            i18n: true
+            fields:
+              - { name: skipToContent, label: Skip to content, widget: string, i18n: true }
+              - { name: mainNavigation, label: Main navigation, widget: string, i18n: true }
+              - { name: mobileNavigation, label: Mobile navigation, widget: string, i18n: true }
+              - { name: switchLanguage, label: Switch language, widget: string, i18n: true }
+              - { name: openMenu, label: Open menu, widget: string, i18n: true }
+              - { name: home, label: Home link, widget: string, i18n: true }
+              - { name: logoAlt, label: Logo description, widget: string, i18n: true }
+              - { name: hero, label: Hero label, widget: string, i18n: true }
+          - name: actions
+            label: Actions and utilities
+            widget: object
+            i18n: true
+            fields:
+              - { name: readArticle, label: Read article, widget: string, i18n: true }
+              - { name: eventDetails, label: Event details, widget: string, i18n: true }
+              - { name: allNews, label: All news, widget: string, i18n: true }
+              - { name: sendEmail, label: Send email, widget: string, i18n: true }
+              - { name: contactUs, label: Contact us, widget: string, i18n: true }
+              - { name: contentManagement, label: Content management, widget: string, i18n: true }
+          - name: news
+            label: News interface
+            widget: object
+            i18n: true
+            fields:
+              - { name: upcomingEvents, label: Upcoming events, widget: string, i18n: true }
+              - { name: articles, label: Articles, widget: string, i18n: true }
+              - { name: noUpcomingEvents, label: No upcoming events, widget: text, i18n: true }
+              - { name: noArticles, label: No articles, widget: text, i18n: true }
+              - { name: noArticlesForTag, label: No articles for tag, widget: text, i18n: true }
+              - { name: pageNotFound, label: Page not found, widget: string, i18n: true }
   - name: pages
     label: Pages
     i18n:

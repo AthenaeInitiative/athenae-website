@@ -20,7 +20,12 @@
 			"subheadline": "Free events where people meet, think together, and make room for better questions.",
 			"primaryCta": "Explore programs",
 			"secondaryCta": "Our mission",
-			"scrollHint": "Discover more"
+			"scrollHint": "Discover more",
+			"upcomingLabel": "Coming up",
+			"upcomingHeading": "Gatherings for thinking together.",
+			"viewAllNews": "View all news",
+			"fieldNotesLabel": "Field notes",
+			"fieldNotesHeading": "The ideas behind our gatherings."
 		},
 		"footer": {
 			"organization": "Organization",
@@ -29,7 +34,34 @@
 			"tagline": "Free events for everyone.",
 			"rights": "Athenae Initiative © 2026. All rights reserved.",
 			"privacy": "Privacy",
-			"terms": "Terms of use"
+			"terms": "Terms of use",
+			"contact": "Contact"
+		},
+		"accessibility": {
+			"skipToContent": "Skip to content",
+			"mainNavigation": "Main navigation",
+			"mobileNavigation": "Mobile navigation",
+			"switchLanguage": "Switch language",
+			"openMenu": "Open menu",
+			"home": "Home",
+			"logoAlt": "Athenae Initiative — two birds in flight within an oval",
+			"hero": "Hero"
+		},
+		"actions": {
+			"readArticle": "Read article",
+			"eventDetails": "Details",
+			"allNews": "All news",
+			"sendEmail": "Send an email",
+			"contactUs": "Contact us",
+			"contentManagement": "Content management"
+		},
+		"news": {
+			"upcomingEvents": "Upcoming events",
+			"articles": "Articles",
+			"noUpcomingEvents": "New events will be announced soon.",
+			"noArticles": "No articles have been published yet.",
+			"noArticlesForTag": "No articles match this tag.",
+			"pageNotFound": "Page not found"
 		}
 	},
 	"fr": {
@@ -53,7 +85,12 @@
 			"subheadline": "Des événements gratuits où l’on se rencontre, réfléchit ensemble et fait place aux meilleures questions.",
 			"primaryCta": "Voir la programmation",
 			"secondaryCta": "Notre mission",
-			"scrollHint": "Découvrir"
+			"scrollHint": "Découvrir",
+			"upcomingLabel": "À venir",
+			"upcomingHeading": "Des rencontres pour penser ensemble.",
+			"viewAllNews": "Voir toutes les nouvelles",
+			"fieldNotesLabel": "Carnets",
+			"fieldNotesHeading": "Les idées derrière nos rencontres."
 		},
 		"footer": {
 			"organization": "Organisation",
@@ -62,7 +99,34 @@
 			"tagline": "Des événements gratuits pour tous.",
 			"rights": "Athenae Initiative © 2026. Tous droits réservés.",
 			"privacy": "Confidentialité",
-			"terms": "Conditions d'utilisation"
+			"terms": "Conditions d'utilisation",
+			"contact": "Contact"
+		},
+		"accessibility": {
+			"skipToContent": "Aller au contenu",
+			"mainNavigation": "Navigation principale",
+			"mobileNavigation": "Navigation mobile",
+			"switchLanguage": "Changer de langue",
+			"openMenu": "Ouvrir le menu",
+			"home": "Accueil",
+			"logoAlt": "Athenae Initiative — deux oiseaux en vol dans un ovale",
+			"hero": "En-tête principal"
+		},
+		"actions": {
+			"readArticle": "Lire l’article",
+			"eventDetails": "Détails",
+			"allNews": "Toutes les nouvelles",
+			"sendEmail": "Écrire un courriel",
+			"contactUs": "Nous contacter",
+			"contentManagement": "Gestion du contenu"
+		},
+		"news": {
+			"upcomingEvents": "Événements à venir",
+			"articles": "Articles",
+			"noUpcomingEvents": "De nouveaux événements seront annoncés bientôt.",
+			"noArticles": "Aucun article n’a encore été publié.",
+			"noArticlesForTag": "Aucun article avec cette étiquette.",
+			"pageNotFound": "Page introuvable"
 		}
 	}
 }

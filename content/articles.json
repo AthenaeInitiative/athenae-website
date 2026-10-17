@@ -1,30 +1,8 @@
 {
 	"en": {
-		"articles": [
-			{
-				"slug": "why-public-conversation-matters",
-				"title": "Why public conversation matters",
-				"summary": "A short reflection on making space for thoughtful disagreement.",
-				"publishedAt": "2026-10-10",
-				"tags": ["Community", "Ideas"],
-				"image": "/media/public-conversation.svg",
-				"imageAlt": "A sunlit room prepared for a conversation",
-				"body": "Public conversation is a practice, not a performance.\n\nIt asks us to listen closely, **stay curious**, and make room for questions that do not have an easy answer.\n\n> The quality of a community is shaped by the conversations it makes possible."
-			}
-		]
+		"articles": []
 	},
 	"fr": {
-		"articles": [
-			{
-				"slug": "pourquoi-la-conversation-publique-compte",
-				"title": "Pourquoi la conversation publique compte",
-				"summary": "Une courte réflexion sur l’espace nécessaire au désaccord fécond.",
-				"publishedAt": "2026-10-10",
-				"tags": ["Communauté", "Idées"],
-				"image": "/media/public-conversation.svg",
-				"imageAlt": "Une salle baignée de lumière prête pour une conversation",
-				"body": "La conversation publique est une pratique, pas une performance.\n\nElle nous invite à écouter attentivement, à **rester curieux** et à faire place aux questions sans réponse facile.\n\n> Une communauté se définit par les conversations qu’elle rend possibles."
-			}
-		]
+		"articles": []
 	}
 }

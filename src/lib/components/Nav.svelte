@@ -51,7 +51,7 @@
 	href="#main-content"
 	class="btn-bronze sr-only text-xs focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50"
 >
-	Skip to content
+	{content.accessibility.skipToContent}
 </a>
 
 <header
@@ -62,17 +62,17 @@
 >
 	<nav
 		class="section-container flex h-16 items-center justify-between lg:h-20"
-		aria-label="Main navigation"
+		aria-label={content.accessibility.mainNavigation}
 	>
 		<!-- Logo / wordmark -->
 		<a
 			href={linkHref('/')}
 			class="group flex items-center gap-3"
-			aria-label="Athenae Initiative — Home"
+			aria-label={`${content.site.title} — ${content.accessibility.home}`}
 		>
 			<img
 				src="/assets/athenae_logo.png"
-				alt="Athenae Initiative"
+				alt={content.site.title}
 				class="h-9 w-9 object-contain opacity-90 brightness-0 invert transition-opacity group-hover:opacity-100"
 			/>
 			<span
@@ -102,7 +102,11 @@
 		<!-- Right actions -->
 		<div class="flex items-center gap-4">
 			<!-- Language toggle -->
-			<button onclick={toggleLocale} class="nav-link hidden sm:block" aria-label="Switch language">
+			<button
+				onclick={toggleLocale}
+				class="nav-link hidden sm:block"
+				aria-label={content.accessibility.switchLanguage}
+			>
 				{content.nav.language}
 			</button>
 
@@ -116,7 +120,7 @@
 				onclick={() => (menuOpen = !menuOpen)}
 				class="relative -mr-2 flex h-8 w-8 items-center justify-center transition-all ease-in lg:hidden"
 				class:-translate-y-1.5={menuOpen}
-				aria-label="Open menu"
+				aria-label={content.accessibility.openMenu}
 				aria-expanded={menuOpen}
 				aria-controls="mobile-menu"
 			>
@@ -143,7 +147,7 @@
 			id="mobile-menu"
 			class="border-t border-navy-700/30 bg-navy-900/98 backdrop-blur-sm lg:hidden"
 			role="dialog"
-			aria-label="Mobile navigation"
+			aria-label={content.accessibility.mobileNavigation}
 		>
 			<ul class="section-container space-y-4 py-6" role="list">
 				{#each navLinks as link (link.key)}
