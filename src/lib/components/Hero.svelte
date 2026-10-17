@@ -5,8 +5,6 @@
 	import { resolveLocale } from '$lib/stores/locale';
 	import { onMount } from 'svelte';
 
-	import Logo from '$lib/assets/athenae_logo.png';
-
 	let heroEl: HTMLElement;
 	let scrollY = $state(0);
 	let mounted = $state(false);
@@ -263,7 +261,7 @@
       "
 		>
 			<img
-				src={Logo}
+				src="/assets/athenae_logo.png"
 				alt="Athenae Initiative — two birds in flight within an oval"
 				class="h-auto w-[min(240px,52vw)] object-contain brightness-0 invert"
 				style="filter: invert(1) sepia(0.2) saturate(0.8) brightness(0.9);"

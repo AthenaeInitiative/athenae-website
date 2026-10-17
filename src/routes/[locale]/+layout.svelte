@@ -6,8 +6,6 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
-	import Logo from '$lib/assets/athenae_logo.png';
-
 	const content = $derived(getSiteContent(resolveLocale(page.params.locale)));
 
 	let { children } = $props();
@@ -16,7 +14,7 @@
 <svelte:head>
 	<meta name="description" content={content.site.description} />
 	<meta property="og:site_name" content={content.site.title} />
-	<meta property="og:image" content={Logo} />
+	<meta property="og:image" content="/assets/athenae_logo.png" />
 </svelte:head>
 
 <Nav />
