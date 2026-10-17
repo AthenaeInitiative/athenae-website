@@ -8,31 +8,59 @@
 	let heroEl: HTMLElement;
 	let scrollY = $state(0);
 	let mounted = $state(false);
+	let reducedMotion = $state(false);
 	const currentLocale = $derived(resolveLocale(page.params.locale));
 	const content = $derived(getSiteContent(currentLocale));
 
-	// Rune-based scroll tracking
-	$effect(() => {
-		const onScroll = () => {
-			scrollY = window.scrollY;
-		};
-		window.addEventListener('scroll', onScroll, { passive: true });
-		return () => window.removeEventListener('scroll', onScroll);
-	});
-
 	onMount(() => {
-		// Stagger entrance
-		setTimeout(() => {
-			mounted = true;
-		}, 80);
+		const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+		let animationFrame = 0;
+		let entranceTimer: ReturnType<typeof setTimeout> | undefined;
+
+		const updateScroll = () => {
+			if (reducedMotion || animationFrame) return;
+
+			animationFrame = requestAnimationFrame(() => {
+				animationFrame = 0;
+				const distance = Math.max(0, -heroEl.getBoundingClientRect().top);
+				scrollY = Math.min(distance, window.innerHeight * 0.6);
+			});
+		};
+
+		const updateMotionPreference = () => {
+			reducedMotion = motionPreference.matches;
+			if (entranceTimer) clearTimeout(entranceTimer);
+			if (reducedMotion) {
+				scrollY = 0;
+				mounted = true;
+			} else {
+				updateScroll();
+				entranceTimer = setTimeout(() => {
+					mounted = true;
+				}, 80);
+			}
+		};
+
+		motionPreference.addEventListener('change', updateMotionPreference);
+		window.addEventListener('scroll', updateScroll, { passive: true });
+		window.addEventListener('resize', updateScroll);
+		updateMotionPreference();
+
+		return () => {
+			motionPreference.removeEventListener('change', updateMotionPreference);
+			window.removeEventListener('scroll', updateScroll);
+			window.removeEventListener('resize', updateScroll);
+			if (animationFrame) cancelAnimationFrame(animationFrame);
+			if (entranceTimer) clearTimeout(entranceTimer);
+		};
 	});
 
-	// Scroll-derived values for JS fallback (when CSS animation-timeline isn't available)
-	const patternRotate = $derived(scrollY * 0.02);
-	const patternScale = $derived(1 + scrollY * 0.0003);
-	const patternOpacity = $derived(Math.max(0, 0.55 - scrollY * 0.002));
-	const logoOffset = $derived(scrollY * 0.18);
-	const textOffset = $derived(scrollY * 0.12);
+	const patternRotate = $derived(reducedMotion ? 0 : scrollY * 0.02);
+	const patternScale = $derived(reducedMotion ? 1 : 1 + scrollY * 0.0003);
+	const patternOpacity = $derived(reducedMotion ? 0.55 : Math.max(0, 0.55 - scrollY * 0.002));
+	const logoOffset = $derived(reducedMotion ? 0 : scrollY * 0.18);
+	const textOffset = $derived(reducedMotion ? 0 : scrollY * 0.12);
+	const scrollHintOpacity = $derived(reducedMotion ? 1 : Math.max(0, 1 - scrollY * 0.008));
 
 	function linkHref(path: string) {
 		return resolve(`/${currentLocale}${path}`);
@@ -309,7 +337,7 @@
 	<!-- Scroll indicator -->
 	<div
 		class="absolute bottom-2 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 transition-all duration-700"
-		style="opacity: {mounted ? Math.max(0, 1 - scrollY * 0.008) : 0};"
+		style="opacity: {mounted ? scrollHintOpacity : 0};"
 		aria-hidden="true"
 	>
 		<p class="text-eyebrow text-[10px] opacity-60">{content.home.scrollHint}</p>
