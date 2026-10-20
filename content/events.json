@@ -2,22 +2,22 @@
   "en": {
     "events": [
       {
-        "slug": "Launch",
+        "slug": "athenaelaunch",
         "title": "Athenae Initiative Launch",
         "summary": "summary",
-        "date": "2026-10-20",
-        "time": "5:00PM",
-        "location": "BMP Coop",
+        "date": "2026-08-27",
+        "time": "7:00PM",
+        "location": "Co-op Bar Milton-Parc",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
-        "imageAlt": "room full of people"
+        "imageAlt": "room full of people during launch event"
       },
       {
-        "slug": "Workshop",
-        "title": "Kuya Printmaking",
+        "slug": "printmakingworkshop",
+        "title": "Printmaking & Matcha Workshop",
         "summary": "summary",
-        "date": "2026-10-20",
+        "date": "2026-09-17",
         "time": "6:00 PM",
-        "location": "Kuya",
+        "location": "Café Kuya Saint-Henri",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
         "imageAlt": "people"
       }
@@ -26,20 +26,20 @@
   "fr": {
     "events": [
       {
-        "slug": "Launch",
+        "slug": "athenaelaunch",
         "title": "Athenae Initiative Launch",
         "summary": "summary",
-        "date": "2026-10-20",
-        "time": "5",
-        "location": "f",
+        "date": "2026-08-27",
+        "time": "7:00PM",
+        "location": "Co-op Bar Milton-Parc",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
-        "imageAlt": "f"
+        "imageAlt": "room full of people during launch event"
       },
       {
-        "slug": "Workshop",
+        "slug": "printmakingworkshop",
         "title": "f",
         "summary": "f",
-        "date": "2026-10-20",
+        "date": "2026-09-17",
         "time": "f",
         "location": "f",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
