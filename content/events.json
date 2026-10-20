@@ -1,8 +1,50 @@
 {
-	"en": {
-		"events": []
-	},
-	"fr": {
-		"events": []
-	}
+  "en": {
+    "events": [
+      {
+        "slug": "Launch",
+        "title": "Athenae Initiative Launch",
+        "summary": "summary",
+        "date": "2026-10-20",
+        "time": "5:00PM",
+        "location": "BMP Coop",
+        "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
+        "imageAlt": "room full of people"
+      },
+      {
+        "slug": "Workshop",
+        "title": "Kuya Printmaking",
+        "summary": "summary",
+        "date": "2026-10-20",
+        "time": "6:00 PM",
+        "location": "Kuya",
+        "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
+        "imageAlt": "people"
+      }
+    ]
+  },
+  "fr": {
+    "events": [
+      {
+        "slug": "Launch",
+        "title": "Athenae Initiative Launch",
+        "summary": "summary",
+        "date": "2026-10-20",
+        "time": "5",
+        "location": "f",
+        "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
+        "imageAlt": "f"
+      },
+      {
+        "slug": "Workshop",
+        "title": "f",
+        "summary": "f",
+        "date": "2026-10-20",
+        "time": "f",
+        "location": "f",
+        "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
+        "imageAlt": "f"
+      }
+    ]
+  }
 }
