@@ -5,7 +5,7 @@
         "slug": "athenaelaunch",
         "title": "Athenae Initiative Launch",
         "summary": "On August 27th, Athenae Initiative gathered at Bar Milton-Parc for our official launch; it was an evening filled with great conversation, new connections, and most importantly, a shared appreciation for the humanities.\n\nThank to our supporters, we raised over $500 through our 50/50 raffle tickets, which was an amazing way to kick off Athenae's fundraising efforts.",
-        "date": "2026-10-31",
+        "date": "2026-10-24",
         "time": "7:00PM",
         "location": "Co-op Bar Milton-Parc",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
@@ -15,11 +15,21 @@
         "slug": "printmakingworkshop",
         "title": "Printmaking & Matcha Workshop",
         "summary": "For Athenae's first workshop, participants designed and carved their own prints, then used them to create their own one-of-a-kind bookmarks — complete with handmade tassels to finish them off. \n\nThroughout the activity, we got to learn about the fascinating history of printmaking from Emma Quỳnh Liên Wong, making the workshop not only hands-on, but also educational. \n\nAnd of course, everyone got to enjoy a drink from Kuya's special set menu, featuring coffee, matcha, and homemade syrups and toppings.",
-        "date": "2026-10-31",
+        "date": "2026-10-24",
         "time": "6:00 PM",
         "location": "Café Kuya Saint-Henri",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
         "imageAlt": "people"
+      },
+      {
+        "slug": "odysseyspeakerevent",
+        "title": "Speaker Series: Homeric Storytelling & The Odyssey",
+        "summary": "Prof. Freedman will explore The Odyssey through the relationship between the epic, its storytellers, and its audiences:\n\nWho are the storytellers in The Odyssey? And who is the audience? From Travis Scott's role as bard in Christopher Nolan's adaptation, to the seductive promise of the sirens to \"sing of everything that has happened,\" this presentation explores the Odyssey through the roles of bards, storytellers, and listeners. What is the power--and what are the dangers--of the story? Why and how does this epic still seduce contemporary audiences?",
+        "date": "2026-10-28",
+        "time": "5:00PM-7:00PM",
+        "location": "Café SoLIT",
+        "image": "/media/dsc-1284.jpg",
+        "imageAlt": "picture of solit cafe with oranges hanging from ceiling"
       }
     ]
   },
@@ -29,7 +39,7 @@
         "slug": "athenaelaunch",
         "title": "Athenae Initiative Launch",
         "summary": "summary",
-        "date": "2026-10-31",
+        "date": "2026-10-24",
         "time": "7:00PM",
         "location": "Co-op Bar Milton-Parc",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
@@ -39,11 +49,21 @@
         "slug": "printmakingworkshop",
         "title": "f",
         "summary": "f",
-        "date": "2026-10-31",
+        "date": "2026-10-24",
         "time": "f",
         "location": "f",
         "image": "/media/Screenshot 2026-09-08 at 7.02.24 PM.png",
         "imageAlt": "f"
+      },
+      {
+        "slug": "odysseyspeakerevent",
+        "title": "s",
+        "summary": "s",
+        "date": "2026-10-28",
+        "time": "5",
+        "location": "s",
+        "image": "/media/dsc-1284.jpg",
+        "imageAlt": "s"
       }
     ]
   }
