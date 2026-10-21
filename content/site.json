@@ -2,7 +2,7 @@
   "en": {
     "site": {
       "title": "Athenae Initiative",
-      "description": "Free public events that make room for curious conversation.",
+      "description": "Free public events that make room for curious conversation",
       "email": "athenaeinitiative@gmail.com"
     },
     "nav": {
@@ -24,8 +24,8 @@
       "upcomingLabel": "Coming up",
       "upcomingHeading": "Gatherings for thinking together.",
       "viewAllNews": "View all news",
-      "fieldNotesLabel": "Field notes",
-      "fieldNotesHeading": "The ideas behind our gatherings."
+      "fieldNotesLabel": "Explore",
+      "fieldNotesHeading": "Athenae Publications"
     },
     "footer": {
       "organization": "Organization",
